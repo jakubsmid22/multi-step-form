@@ -27,7 +27,7 @@ const ContainerFooter = ({
         onClick={handleNextStep}
         className={`${activeStep === "summary" ? "bg-purplish-blue hover:bg-[#928CFF]" : "bg-marine-blue hover:bg-[#164A8A]"} cursor-pointer rounded-sm px-5 py-3 font-medium text-white transition-colors duration-300`}
       >
-        {activeStep === "summary" ? "Confirm" : "Next"}
+        {activeStep === "summary" ? "Confirm" : "Next Step"}
       </button>
     </div>
   );
