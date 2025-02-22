@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/Ubuntu-Bold.ttf");
+}
+
+@theme {
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --color-marine-blue: hsl(213, 96%, 18%);
+  --color-purplish-blue: hsl(243, 100%, 62%);
+  --color-pastel-blue: hsl(228, 100%, 84%);
+  --color-light-blue: hsl(206, 94%, 87%);
+  --color-strawberry-red: hsl(354, 84%, 57%);
+  --color-cool-gray: hsl(231, 11%, 63%);
+  --color-light-gray: hsl(229, 24%, 87%);
+  --color-magnolia: hsl(217, 100%, 97%);
+  --color-alabaster: hsl(231, 100%, 99%);
+  --color-bg: rgba(239, 245, 255, 1);
+  --color-border: rgba(214, 217, 230, 1);
+  --breakpoint-xs: 400px;
+}
+
+.step {
+  @apply flex gap-3;
+}
+
+.step-text {
+  @apply hidden lg:block;
+}
+
+.step-text p {
+  @apply text-light-blue text-sm;
+}
+
+.step-text h1 {
+  @apply font-bold text-white;
+}
+
+.step-number {
+  @apply border-border flex h-10 w-10 items-center justify-center rounded-full border-2 p-2 font-bold text-white transition-colors duration-700;
+}
+
+.step-number.active {
+  @apply bg-light-blue text-marine-blue border-none;
+}
+
+.form {
+  @apply xs:absolute xs:top-32 xs:right-5 xs:left-5 xs:space-y-7 relative -top-16 space-y-5 rounded-xl bg-white p-10 transition-all duration-1000 lg:relative lg:top-auto lg:right-auto lg:left-auto lg:h-[85%];
+}
+
+.form-titles {
+  @apply xs:space-y-3 space-y-1;
+}
+
+.form-title {
+  @apply text-4xl font-bold;
+}
+
+.form-subtitle {
+  @apply text-cool-gray text-lg;
+}
+
+.input {
+  @apply flex flex-col gap-2;
+}
+
+.input-top {
+  @apply flex items-center justify-between;
+}
+
+.input-top span {
+  @apply text-strawberry-red text-sm font-bold;
+}
+
+.input-top label {
+  @apply text-marine-blue;
+}
+
+.input input {
+  @apply border-border hover:border-purplish-blue rounded-lg border p-4 transition-colors duration-300 hover:cursor-pointer;
+}
+
+.input.error input {
+  @apply border-strawberry-red;
+}
+
+.plan {
+  @apply border-border hover:border-purplish-blue flex max-h-fit cursor-pointer items-start gap-4 rounded-md border p-4 transition-all duration-300 lg:w-[33.33%] lg:flex-col;
+}
+
+.plan h1 {
+  @apply text-marine-blue font-medium;
+}
+
+.plan p {
+  @apply text-cool-gray text-sm;
+}
+
+.plan .yearly-dicount {
+  @apply text-sm;
+}
+
+.active {
+  @apply !border-purplish-blue bg-alabaster;
+}
+
+.add-on {
+  @apply border-border hover:border-purplish-blue flex cursor-pointer items-center justify-between rounded-lg border p-5 transition-colors duration-300;
+}
+
+.add-on img {
+  @apply bg-purplish-blue h-full w-full p-1;
+}
+
+.add-on-left {
+  @apply flex items-center gap-5;
+}
+
+.checkbox {
+  @apply border-border flex h-6 w-6 items-center justify-center overflow-hidden rounded-sm border;
+}
+
+.add-on-info {
+  @apply flex flex-col;
+}
+
+.add-on-info h1 {
+  @apply text-marine-blue font-medium;
+}
+
+.add-on-info p {
+  @apply text-cool-gray text-sm;
+}
+
+.add-on-right {
+  @apply text-purplish-blue;
+}
+
+.add-on-bill div {
+  @apply flex justify-between;
+}
+
+.add-on-bill div p:first-child {
+  @apply text-cool-gray;
+}
+
+.add-on-bill div p:last-child {
+  @apply text-marine-blue;
+}
