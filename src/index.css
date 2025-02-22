@@ -70,7 +70,7 @@
 }
 
 .form-title {
-  @apply text-4xl font-bold;
+  @apply text-4xl font-bold text-marine-blue;
 }
 
 .form-subtitle {
