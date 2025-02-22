@@ -26,7 +26,7 @@ const StepsContainer = () => {
         alt="bg"
         className="w-full"
       />
-      <div className="absolute top-10 left-1/2 flex gap-5 max-lg:-translate-x-1/2 lg:left-7 lg:flex-col lg:gap-7">
+      <div className="absolute top-10 left-1/2 flex gap-5 max-lg:-translate-x-1/2 lg:left-10 lg:flex-col lg:gap-7">
         <div className="step">
           <div
             className={`step-number ${activeStep === "your-info" && "active"}`}
